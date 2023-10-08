@@ -9,10 +9,10 @@ if __name__ == '__main__':
       multiple line comment
     """
     # Functions
-    name = helloFunctionsInput.func()
+    # name = helloFunctionsInput.func()
 
     # sting manipulation methods
-    typeConversion.stringManipulation(name)
+    # typeConversion.stringManipulation(name)
     # escape sequence example
     # print(' hello,\n ' + name)
 
@@ -22,3 +22,12 @@ if __name__ == '__main__':
     # year = input('enter year: ')
     # Function for Leap Year
     # print((leapYear.leapYear(int(year))))
+
+    # Type Conversion
+    # typeConversion.numberStringConversion('2345')
+
+    # all Type Conversion
+    var1 = float(input('value of variable 1'))
+    var1 = str(input('value of variable 1'))
+    var1 = int(input('value of variable 1'))
+    typeConversion.allTypeConversion(var1)
