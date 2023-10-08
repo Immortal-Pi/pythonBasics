@@ -1,4 +1,5 @@
 # import the py file to call the functions from that file
+import formatStringNumber
 import helloFunctionsInput
 import leapYear
 import typeConversion
@@ -27,7 +28,11 @@ if __name__ == '__main__':
     # typeConversion.numberStringConversion('2345')
 
     # all Type Conversion
-    var1 = float(input('value of variable 1'))
-    var1 = str(input('value of variable 1'))
-    var1 = int(input('value of variable 1'))
-    typeConversion.allTypeConversion(var1)
+    # var1 = int(input('value of variable 1'))
+    # var1 = str(input('value of variable 1'))
+    # var1 = int(input('value of variable 1'))
+    # typeConversion.allTypeConversion(var1)
+
+
+    # Change number formats
+    formatStringNumber.changeNumberFormat()

@@ -27,12 +27,19 @@ def allTypeConversion(input):
 
     # find the type
     print(type(input))
-    if isinstance(input,int):
+
+    # rounding off
+    output=round(input[0,4])
+    print(output)
+
+
+
+    #if isinstance(input,int):
         # output=str(input) # convert to sting
         # print(output, type(output))
-        output = float(input) # convert to float
-        print(output, type(output))
-    elif isinstance(input,str):
-        output = int(input) # convert
-        print(output, type(output))
+    #    output = float(input) # convert to float
+    #    print(output, type(output))
+    #elif isinstance(input,str):
+    #    output = int(input) # convert
+    #    print(output, type(output))
 
