@@ -15,6 +15,7 @@ def stringManipulation(inputString):
     # Chain the commands together
     inputString = inputString.strip().title()
     print ('hello, ' + inputString)
+    print(inputString.ljust(20,'-'))
     return
 
 def numberStringConversion(inputString):

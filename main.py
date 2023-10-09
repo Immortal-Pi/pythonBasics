@@ -2,6 +2,7 @@
 import formatStringNumber
 import helloFunctionsInput
 import leapYear
+import patterns
 import typeConversion
 
 if __name__ == '__main__':
@@ -35,4 +36,5 @@ if __name__ == '__main__':
 
 
     # Change number formats
-    formatStringNumber.changeNumberFormat()
+    # formatStringNumber.changeNumberFormat()
+    patterns.patternPyramid(5)
