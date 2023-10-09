@@ -37,4 +37,6 @@ if __name__ == '__main__':
 
     # Change number formats
     # formatStringNumber.changeNumberFormat()
-    patterns.patternPyramid(3)
+    # patterns.patternPyramid(3)
+    # patterns.stringPatter("ABCDEFGHIJKLMNOPQRSTUVWXYZ",3)
+    patterns.matPattern(11,33)
