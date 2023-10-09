@@ -37,4 +37,4 @@ if __name__ == '__main__':
 
     # Change number formats
     # formatStringNumber.changeNumberFormat()
-    patterns.patternPyramid(5)
+    patterns.patternPyramid(3)
