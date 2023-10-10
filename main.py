@@ -39,4 +39,6 @@ if __name__ == '__main__':
     # formatStringNumber.changeNumberFormat()
     # patterns.patternPyramid(3)
     # patterns.stringPatter("ABCDEFGHIJKLMNOPQRSTUVWXYZ",3)
-    patterns.matPattern(11,33)
+    # patterns.matPattern(11,33)
+    # patterns.aphabeticRangoli(3)
+

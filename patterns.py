@@ -34,6 +34,7 @@ def stringPatter(givenString, max_width):
     return
 
 def matPattern(length,width):
+    # https://www.hackerrank.com/challenges/designer-door-mat/problem?isFullScreen=true
     design1='.|.'
     design2='-'
     design3='WELCOME'
@@ -44,3 +45,10 @@ def matPattern(length,width):
     for i in range(0,math.floor(length/2)):
         print((design1*(length-1-(1+i*2))).center(width,'-'))
 
+
+def aphabeticRangoli(n):
+    # https://www.hackerrank.com/challenges/alphabet-rangoli/problem?isFullScreen=true
+    for i in range(n,-n,-1):
+        print()
+
+    return
