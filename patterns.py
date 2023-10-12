@@ -46,9 +46,4 @@ def matPattern(length,width):
         print((design1*(length-1-(1+i*2))).center(width,'-'))
 
 
-def aphabeticRangoli(n):
-    # https://www.hackerrank.com/challenges/alphabet-rangoli/problem?isFullScreen=true
-    for i in range(n,-n,-1):
-        print()
 
-    return
