@@ -1,5 +1,5 @@
 from HackerRank import TriangleQuest, companyLogo, lists, tupleOperations, stringFormatting, triangleQuest2, subString, \
-    mergethetools, sets
+    mergethetools, sets, itertoolsOp, lambdaOperations, sortedOperations
 from HackerRank import nestedList
 from HackerRank import dictionaryKeyVAlue
 from HackerRank import alphavetRangoli
@@ -20,4 +20,7 @@ if __name__ == '__main__':
     # triangleQuest2.triangleQst2(5)
     # subString.count_substring("ABCDCDCDCCD","CDC")
     # mergethetools.mergeString("AAABBBCCC",3)
-    sets.setManipulation()
+    # sets.setManipulation()
+    # itertoolsOp.itertoolsOperation()
+    # lambdaOperations.lambdaOp()
+    sortedOperations.sortedOp()
