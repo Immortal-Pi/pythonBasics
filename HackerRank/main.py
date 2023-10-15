@@ -1,4 +1,5 @@
-from HackerRank import TriangleQuest, companyLogo, lists, tupleOperations, stringFormatting, triangleQuest2, subString
+from HackerRank import TriangleQuest, companyLogo, lists, tupleOperations, stringFormatting, triangleQuest2, subString, \
+    mergethetools, sets
 from HackerRank import nestedList
 from HackerRank import dictionaryKeyVAlue
 from HackerRank import alphavetRangoli
@@ -15,6 +16,8 @@ if __name__ == '__main__':
     # lists.listComprehensions()
     # stringFormatting.stringFormat()
     # alphavetRangoli.alpharangoli(22)
-    MinionGame.bananaGame("bananaiou")
+    # MinionGame.bananaGame("banana")
     # triangleQuest2.triangleQst2(5)
     # subString.count_substring("ABCDCDCDCCD","CDC")
+    # mergethetools.mergeString("AAABBBCCC",3)
+    sets.setManipulation()

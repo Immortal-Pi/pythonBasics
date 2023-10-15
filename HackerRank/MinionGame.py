@@ -1,5 +1,9 @@
 def bananaGame(string):
     # https://www.hackerrank.com/challenges/the-minion-game/problem?isFullScreen=true
+    """
+    :param string: long solution, not optimized
+    :return:
+
     player1='Stuart'
     player2='Kevin'
 
@@ -48,5 +52,23 @@ def bananaGame(string):
         print(player2,scoreVowels)
     elif(scoreConsonants==scoreVowels):
         print('Draw')
+    """
+
+    #saw this solution online
+    n=len(string)
+    comb=(n*(n+1)/2)
+    counts=0
+    countk=0
+
+    for i in range(len(string)):
+        if string[i] in "AEIOU":
+            countk+=len(string[i:])
+            # print(string[i:])
+    if counts == countk:
+        print("Draw")
+    elif counts > countk:
+        print("Stuart", int(counts))
+    else:
+        print("Kevin", int(countk))
 
     return
