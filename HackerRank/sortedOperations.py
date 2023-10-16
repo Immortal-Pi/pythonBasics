@@ -1,3 +1,8 @@
+class Student:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+
 def sortedOp():
 
     list1=[5,4,3,2,1]
@@ -10,4 +15,12 @@ def sortedOp():
     grades=[('amruth',66),('aksath',77,),('sharath',44)]
     print(grades)
     print(sorted(grades,key=lambda x:x[0]))
+
+
+    # Sorted function for class objects
+    students = [Student("Alice", 20), Student("Bob", 22), Student("Charlie", 19)]
+    students1=sorted(students,key=lambda x:x.age)
+
+    for i in students1:
+        print(i.name,i.age)
     return
