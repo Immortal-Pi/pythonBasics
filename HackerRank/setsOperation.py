@@ -20,6 +20,9 @@ def setsOp():
 
 
     # https://www.hackerrank.com/challenges/py-set-discard-remove-pop/problem?isFullScreen=true
+
+    # SET FUNCTIONS
+
     # integerNumbers = int(input())
     # set1=set(map(int,input().split()))
     # print(set1)
@@ -57,14 +60,97 @@ def setsOp():
     # s=s.union({"Z":1})
     # s=s|set("AMruth")
     # print(s)
+    # firstNumber=int(input())
+    # setList=set(map(int,input().split()))
+    # secondNumber=int(input())
+    # setList2=set(map(int,input().split()))
+    # print(len(setList.union(setList2)))
 
 
-    firstNumber=int(input())
-    setList=set(map(int,input().split()))
 
-    secondNumber=int(input())
-    setList2=set(map(int,input().split()))
 
-    print(len(setList.union(setList2)))
 
+    # https://www.hackerrank.com/challenges/py-set-mutations/problem?isFullScreen=true
+
+    # SET MUTATIONS
+    # s=set("Hacker")
+    # print(s)
+    # s.update("RANK")
+    # print(s)
+    # elementsNumber=int(input())
+    # set1=set(map(int,input().split()))
+    # elementsOperation=int(input())
+    # OperationCommands=[]
+    # elementsCommand=[]
+    # for i in range(0,elementsOperation):
+    #     OperationCommands.append(input().split())
+    #     elementsCommand.append(set(map(int,input().split())))
+    # # print(OperationCommands)
+    # # print(elementsCommand)
+    #
+    # for index,i in enumerate(OperationCommands):
+    #     if i[0]=='intersection_update':
+    #
+    #         set1.intersection_update(elementsCommand[index])
+    #     elif i[0]=='update':
+    #         # for j in range(int(i[1])):
+    #         set1.update(elementsCommand[index])
+    #
+    #     elif i[0]=='symmetric_difference_update':
+    #         # for j in range(int(i[1])):
+    #         set1.symmetric_difference_update(elementsCommand[index])
+    #     elif i[0]=='difference_update':
+    #         # for j in range(int(i[1])):
+    #         set1.difference_update(elementsCommand[index])
+    #     # print(set1,i[0])
+    # sum=0
+    # for i in set1:
+    #     sum+=i
+    #
+    # print(sum)
+
+
+
+    # https://www.hackerrank.com/challenges/py-the-captains-room/problem?isFullScreen=true
+
+    # number=int(input())
+    # numberList=list(map(int,input().split()))
+    # # print(list(numberList))
+    # for i in numberList:
+    #     if numberList.count(i) ==1:
+    #
+    #         print(i)
+    #
+
+
+
+
+
+
+
+    #https://www.hackerrank.com/challenges/py-check-subset/problem?isFullScreen=true
+
+    # testCases=int(input())
+    # for i in range(testCases):
+    #     setANumber=int(input())
+    #     setAelements=set(map(int,input().split()))
+    #     setBNumber = int(input())
+    #     setBelements = set(map(int, input().split()))
+    #     print(setAelements.issubset(setBelements))
+    #     set
+
+
+    # https://www.hackerrank.com/challenges/py-check-strict-superset/problem?isFullScreen=true
+
+
+    setAelements = set(map(int, input().split()))
+    booleanAnswer=bool
+    testCases = int(input())
+    for i in range(testCases):
+
+
+        setBelements = set(map(int, input().split()))
+        booleanAnswer=booleanAnswer and setAelements.issuperset(setBelements) and len(setAelements) > len(setBelements)
+        print(booleanAnswer)
+    print(booleanAnswer)
     return

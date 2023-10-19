@@ -1,5 +1,6 @@
 from HackerRank import TriangleQuest, companyLogo, lists, tupleOperations, stringFormatting, triangleQuest2, subString, \
-    mergethetools, sets, itertoolsOp, lambdaOperations, sortedOperations, setsOperation
+    mergethetools, sets, itertoolsOp, lambdaOperations, sortedOperations, setsOperation, numpyOperations, \
+    polarCoordinates
 from HackerRank import nestedList
 from HackerRank import dictionaryKeyVAlue
 from HackerRank import alphavetRangoli
@@ -24,4 +25,6 @@ if __name__ == '__main__':
     # itertoolsOp.itertoolsOperation()
     # lambdaOperations.lambdaOp()
     # sortedOperations.sortedOp()
-    setsOperation.setsOp()
+    # setsOperation.setsOp()
+    # numpyOperations.numpyOp()
+    polarCoordinates.polarCor()
