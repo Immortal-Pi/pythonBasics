@@ -148,22 +148,54 @@ def collectionsOp():
 
     # https://www.hackerrank.com/challenges/py-collections-deque/problem?isFullScreen=true
     # deque
-    doubleEndedQueue=collections.deque()
-    number=int(input())
-    for i in range(number):
-        stringOperation=list(input().split())
-        if stringOperation[0]=='append':
-            doubleEndedQueue.append(int(stringOperation[1]))
-        elif stringOperation[0]=='appendleft':
-            doubleEndedQueue.appendleft(int(stringOperation[1]))
-        elif stringOperation[0]=='pop':
-            doubleEndedQueue.pop()
-        elif stringOperation[0]=='popleft':
-            doubleEndedQueue.popleft()
-    stringAnswer=''
-    for i in doubleEndedQueue:
-        stringAnswer+=str(i)+' '
-    stringAnswer=stringAnswer.strip()
-    print(stringAnswer)
+    # doubleEndedQueue=collections.deque()
+    # number=int(input())
+    # for i in range(number):
+    #     stringOperation=list(input().split())
+    #     if stringOperation[0]=='append':
+    #         doubleEndedQueue.append(int(stringOperation[1]))
+    #     elif stringOperation[0]=='appendleft':
+    #         doubleEndedQueue.appendleft(int(stringOperation[1]))
+    #     elif stringOperation[0]=='pop':
+    #         doubleEndedQueue.pop()
+    #     elif stringOperation[0]=='popleft':
+    #         doubleEndedQueue.popleft()
+    # stringAnswer=''
+    # for i in doubleEndedQueue:
+    #     stringAnswer+=str(i)+' '
+    # stringAnswer=stringAnswer.strip()
+    # print(stringAnswer)
+
+
+
+
+
+    # https://www.hackerrank.com/challenges/piling-up/problem?isFullScreen=true
+    # Piling up
+
+    numberOfPillers=int(input())
+
+    for i in range(numberOfPillers):
+        pillerLength=int(input())
+        doubleEndedQueue = collections.deque()
+        list1=list(map(int,input().split()))
+        output='Yes'
+        for i in list1:
+            doubleEndedQueue.append(i)
+        for i in range(pillerLength):
+            resultQueue=[]
+            if doubleEndedQueue[0]>=doubleEndedQueue[len(doubleEndedQueue)-1] and len(doubleEndedQueue)>0 :
+                resultQueue.append(doubleEndedQueue[0])
+                doubleEndedQueue.popleft()
+                print(doubleEndedQueue)
+            elif doubleEndedQueue[0]<=doubleEndedQueue[len(doubleEndedQueue)-1] and len(doubleEndedQueue)>0:
+                doubleEndedQueue.pop()
+                print(doubleEndedQueue)
+            else:
+                output='No'
+
+        print(output)
+        # for i in range(pillerLength):
+        #     if
 
     return
