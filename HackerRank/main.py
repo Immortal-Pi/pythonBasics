@@ -28,5 +28,6 @@ if __name__ == '__main__':
     # setsOperation.setsOp()
     # numpyOperations.numpyOp()
     # polarCoordinates.polarCor()
-    collectionsOperation.collectionsOp()
+    # collectionsOperation.collectionsOp()
     # dateTimeCalendar.dataTimeCalendarOp()
+    # print('hello')

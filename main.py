@@ -1,7 +1,9 @@
 # import the py file to call the functions from that file
+import Exceptions
 import formatStringNumber
 import helloFunctionsInput
 import leapYear
+import loops2
 import patterns
 import typeConversion
 
@@ -41,4 +43,6 @@ if __name__ == '__main__':
     # patterns.stringPatter("ABCDEFGHIJKLMNOPQRSTUVWXYZ",3)
     # patterns.matPattern(11,33)
     # patterns.aphabeticRangoli(3)
-
+    # loops2.loops2()
+    # print('hello')
+    Exceptions.exceptionTestcases()
