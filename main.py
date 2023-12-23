@@ -7,6 +7,7 @@ import loops2
 import patterns
 import typeConversion
 
+
 if __name__ == '__main__':
     # print the return value from the function
     """
