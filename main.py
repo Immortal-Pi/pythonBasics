@@ -1,5 +1,6 @@
 # import the py file to call the functions from that file
 import Exceptions
+import customExceptions
 import formatStringNumber
 import helloFunctionsInput
 import leapYear
@@ -46,4 +47,5 @@ if __name__ == '__main__':
     # patterns.aphabeticRangoli(3)
     # loops2.loops2()
     # print('hello')
-    Exceptions.exceptionTestcases()
+    # Exceptions.exceptionTestcases()
+    customExceptions.exceptions123()
