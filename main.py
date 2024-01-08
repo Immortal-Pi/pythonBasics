@@ -1,13 +1,19 @@
 # import the py file to call the functions from that file
 import Exceptions
+import commandLineArguments
 import customExceptions
 import formatStringNumber
 import helloFunctionsInput
 import leapYear
+import libraries
 import loops2
 import patterns
 import typeConversion
+import sys
 
+class fewArgumentException(Exception):
+    def __init__(self,message):
+        super().__init__('too few arguments'+ message)
 
 if __name__ == '__main__':
     # print the return value from the function
@@ -48,4 +54,13 @@ if __name__ == '__main__':
     # loops2.loops2()
     # print('hello')
     # Exceptions.exceptionTestcases()
-    customExceptions.exceptions123()
+    # customExceptions.exception234()
+    # libraries.randomFunctions()
+    try:
+        if len(sys.argv)<=2:
+            raise fewArgumentException('')
+        else:
+            commandLineArguments.commandLine(sys.argv[2])
+    except fewArgumentException as e:
+        print(e)
+
