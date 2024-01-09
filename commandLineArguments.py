@@ -1,4 +1,5 @@
 import string
+import cowsay
 # import sys - this is used to get command line arguments into a function
 class nameException(Exception):
     def __init__(self,message):
@@ -8,7 +9,11 @@ def commandLine(inputString):
         if inputString.isdigit():
             raise nameException('name')
         else:
-            print('my name is '+ inputString)
+            # cowsay.cow('my name is '+ inputString)
+            cowsay.trex('say what '+ inputString)
+
     except nameException as e:
         print(e)
+
+
 

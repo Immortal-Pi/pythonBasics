@@ -1,5 +1,7 @@
 # import the py file to call the functions from that file
 import Exceptions
+import Packages
+# import Packages
 import commandLineArguments
 import customExceptions
 import formatStringNumber
@@ -11,9 +13,10 @@ import patterns
 import typeConversion
 import sys
 
-class fewArgumentException(Exception):
-    def __init__(self,message):
-        super().__init__('too few arguments'+ message)
+
+# class fewArgumentException(Exception):
+#     def __init__(self,message):
+#         super().__init__('too few arguments'+ message)
 
 if __name__ == '__main__':
     # print the return value from the function
@@ -56,11 +59,29 @@ if __name__ == '__main__':
     # Exceptions.exceptionTestcases()
     # customExceptions.exception234()
     # libraries.randomFunctions()
-    try:
-        if len(sys.argv)<=2:
-            raise fewArgumentException('')
-        else:
-            commandLineArguments.commandLine(sys.argv[2])
-    except fewArgumentException as e:
-        print(e)
+
+
+    # command line arguments usage
+    # try:
+    #     if len(sys.argv)<=2:
+    #         raise fewArgumentException('')
+    #
+    #     else:
+    #         commandLineArguments.commandLine(sys.argv[2])
+    # except fewArgumentException as e:
+    #     print(e)
+
+    # list1=[]
+    # for arg in sys.argv:
+    #     list1.append(arg)
+    # print(list1[::-1])
+
+
+    #Packages
+    # using packages and API's
+    Packages.packagesExperiment(sys.argv)
+
+
+
+
 
