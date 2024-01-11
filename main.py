@@ -1,5 +1,6 @@
 # import the py file to call the functions from that file
 import Exceptions
+import GifcreationusingPIL
 import Packages
 # import Packages
 import commandLineArguments
@@ -89,5 +90,10 @@ if __name__ == '__main__':
 
 
     # file i/o
-    fileInputOutputOperations.fileiooperations()
+    # fileInputOutputOperations.fileiooperations()
+
+
+
+    #gif creation
+    GifcreationusingPIL.gifcreation(sys.argv)
 
