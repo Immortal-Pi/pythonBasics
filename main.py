@@ -12,6 +12,7 @@ import leapYear
 import libraries
 import loops2
 import patterns
+import regularExpression
 import typeConversion
 import sys
 
@@ -95,5 +96,10 @@ if __name__ == '__main__':
 
 
     #gif creation
-    GifcreationusingPIL.gifcreation(sys.argv)
+    # GifcreationusingPIL.gifcreation(sys.argv)
 
+
+    #Regular expression
+    # regularExpression.regularExpressionex()
+    # regularExpression.reformatdata()
+    regularExpression.extractinformation()
