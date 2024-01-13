@@ -1,6 +1,9 @@
 # import the py file to call the functions from that file
+# import OOPS
+
 import Exceptions
 import GifcreationusingPIL
+import OOPS.classwithgetterandsetter
 import Packages
 # import Packages
 import commandLineArguments
@@ -17,6 +20,7 @@ import typeConversion
 import sys
 
 import test_leapYear
+from OOPS import oopstestingprograms
 
 # class fewArgumentException(Exception):
 #     def __init__(self,message):
@@ -102,4 +106,9 @@ if __name__ == '__main__':
     #Regular expression
     # regularExpression.regularExpressionex()
     # regularExpression.reformatdata()
-    regularExpression.extractinformation()
+    # regularExpression.extractinformation()
+
+
+    #oops
+    # oopstestingprograms.testing()
+    OOPS.classwithgetterandsetter.classworks()
