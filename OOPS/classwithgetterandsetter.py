@@ -30,11 +30,8 @@ class student:
         return f"{self.name} is from {self.address}"
 
 
-
-
-
 def classworks():
     student1=student("amruth",'hebbal')
     # student1.address='das'
-    student1._address='das' #exception of using _
+    # student1._address='das' #exception of using _
     print(student1)

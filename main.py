@@ -1,9 +1,10 @@
 # import the py file to call the functions from that file
-# import OOPS
+import OOPS
 
 import Exceptions
 import GifcreationusingPIL
 import OOPS.classwithgetterandsetter
+import OOPS.classmethods
 import Packages
 # import Packages
 import commandLineArguments
@@ -21,7 +22,8 @@ import sys
 
 import test_leapYear
 from OOPS import oopstestingprograms
-
+from OOPS import inheritanceclass
+from OOPS import operatorOverloading
 # class fewArgumentException(Exception):
 #     def __init__(self,message):
 #         super().__init__('too few arguments'+ message)
@@ -111,4 +113,7 @@ if __name__ == '__main__':
 
     #oops
     # oopstestingprograms.testing()
-    OOPS.classwithgetterandsetter.classworks()
+    # OOPS.classwithgetterandsetter.classworks()
+    # OOPS.classmethods.methodsinclass()
+    # OOPS.inheritanceclass.infunction()
+    OOPS.operatorOverloading.operatorOverloading()
