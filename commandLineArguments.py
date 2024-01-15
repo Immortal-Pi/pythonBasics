@@ -1,5 +1,6 @@
 import string
 import cowsay
+import argparse
 # import sys - this is used to get command line arguments into a function
 class nameException(Exception):
     def __init__(self,message):

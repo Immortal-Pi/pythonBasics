@@ -23,5 +23,5 @@ def operatorOverloading():
     student3=student(500,23,"sharath")
     student4=student1+student2+student3
     print(student4)
-    _=student2>student4
+    _ = student2 > student4
     return

@@ -1,6 +1,6 @@
 # import the py file to call the functions from that file
 import OOPS
-
+import argparse
 import Exceptions
 import GifcreationusingPIL
 import OOPS.classwithgetterandsetter
@@ -11,19 +11,23 @@ import commandLineArguments
 import customExceptions
 import fileInputOutputOperations
 import formatStringNumber
+import generatorsfunctions
 import helloFunctionsInput
 import leapYear
 import libraries
 import loops2
 import patterns
 import regularExpression
+import texttospeech
 import typeConversion
 import sys
 
 import test_leapYear
+import unpacking
 from OOPS import oopstestingprograms
 from OOPS import inheritanceclass
 from OOPS import operatorOverloading
+from OOPS import typehint
 # class fewArgumentException(Exception):
 #     def __init__(self,message):
 #         super().__init__('too few arguments'+ message)
@@ -86,6 +90,18 @@ if __name__ == '__main__':
     #     list1.append(arg)
     # print(list1[::-1])
 
+    #argparse
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("-n",default=1,help='number of times meow',type=int)
+    # parser.add_argument("-f",help="file name",type=str)
+    # arg=parser.parse_args()
+    # for _ in range(arg.n):
+    #     print("meow")
+    # print(arg.f)
+
+
+
+
 
     #Packages
     # using packages and API's
@@ -116,4 +132,32 @@ if __name__ == '__main__':
     # OOPS.classwithgetterandsetter.classworks()
     # OOPS.classmethods.methodsinclass()
     # OOPS.inheritanceclass.infunction()
-    OOPS.operatorOverloading.operatorOverloading()
+    # OOPS.operatorOverloading.operatorOverloading()
+
+
+    #type hint
+    # number :int=int(input())
+    # print(OOPS.typehint.typehintopeationfunction((number)))
+
+
+    #unpacking variables
+    # unpacking.unpacking123()
+    # name=["amruth", "akshath", "sharath"]
+    # names=[{"name":"amruth","address":"telegana","salary":200},
+    #        {"name": "akshath", "address": "chennail", "salary": 300},
+    #        {"name": "sharath", "address": "kerala", "salary": 400},
+    #        {"name": "subu", "address": "bangalore", "salary": 200},
+    #        {"name": "chiranth", "address": "delhi", "salary": 300}
+    #        ]
+    # unpacking.func(*names)
+
+    # parser=argparse.ArgumentParser()
+    # parser.add_argument("-n",help='number of sheeps',default=1,type=int)
+    # arg=parser.parse_args()
+    # generatorsfunctions.genfunctions(arg.n)
+    # parser=argparse.ArgumentParser()
+    # parser.add_argument("-n",help="number of elements",type=int)
+    # parser.add_argument("-he",help='help in instructions',type=str)
+    # arg=parser.parse_args()
+    # print(arg.he)
+    texttospeech.texttospeech()
