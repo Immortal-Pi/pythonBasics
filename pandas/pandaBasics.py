@@ -39,7 +39,7 @@ index=np.arange(5)
 
 #pie chart
 explode=[0,0,0.2,0,0]
-series2.plot.pie(autopct='%.2f%%',explode=explode)
+series2.plot.pie(autopct='%.2f%%',explode=explode,shadow=True)
 
 #hist plot
 # series.plot.hist()
