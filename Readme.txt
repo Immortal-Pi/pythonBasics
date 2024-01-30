@@ -16,5 +16,8 @@ Initial learning
 	• matplotlib
 	• pandas
 
+  ML concepts
+    • linear regression using sklearn
+
 link to the course 
 https://learning.edx.org/course/course-v1:HarvardX+CS50P+Python/block-v1:HarvardX+CS50P+Python+type@sequential+block@744dad66fcce478a92fb1073b3d373fa/block-v1:HarvardX+CS50P+Python+type@vertical+block@263dc9ef9c66490aa5511e9f8633de34
