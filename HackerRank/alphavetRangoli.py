@@ -31,3 +31,5 @@ def alpharangoli(number):
 
 
     return
+
+alpharangoli(10)
