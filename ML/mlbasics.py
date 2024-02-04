@@ -68,14 +68,11 @@ model3=6+18*data['Units']
 fig,ax1=plt.subplots()
 ax1.scatter(x='Units',y='Minutes',data=data,label='actual repair time')
 
-ax1.plot(data['Units'],model2,c='r',label='model2')
+ax1.plot(data['Units'],model2,c='b',label='model2')
 ax1.plot(data['Units'],model3,c='g',label='model3')
 
-ax1.legend()
-ax1.set_xlabel('UNITS')
-ax1.set_ylabel('MINUTES')
-ax1.set_title('Speculated Module')
-# plt.show()
+
+
 
 datamodule1=pd.DataFrame(
     {
@@ -86,7 +83,7 @@ datamodule1=pd.DataFrame(
     }
 )
 print(sum(datamodule1['Error']**2))
-print(datamodule1)
+# print(datamodule1)
 
 
 datamodule2=pd.DataFrame(
@@ -98,7 +95,7 @@ datamodule2=pd.DataFrame(
     }
 )
 print(sum(datamodule2['Error']**2))
-print(datamodule2)
+# print(datamodule2)
 
 
 datamodule3=pd.DataFrame(
@@ -110,4 +107,65 @@ datamodule3=pd.DataFrame(
     }
 )
 print(sum(datamodule3['Error']**2))
-print(datamodule3)
+# print(datamodule3)
+
+
+#we find the best model by theortital
+
+x=data.Units
+y=data.Minutes
+xiyi=x*y
+n=len(data)
+xmean=x.mean()
+ymean=y.mean()
+
+numerator=xiyi.sum()-n*xmean*ymean
+denominator= (x**2).sum() - n*(xmean**2)
+
+m=numerator/denominator
+
+c=ymean-(m*xmean)
+print(f"intercept: {c} coefficient: {m}")
+
+minutes_best_fit_model=c+m*data['Units']
+data['bestfitmodel']=minutes_best_fit_model
+
+# print(data)
+
+databestfitmodel=pd.DataFrame(
+    {
+        'Units':data['Units'],
+        'Actual_time':data['Minutes'],
+        'predicted_time':data['bestfitmodel'],
+        'Error':(data['bestfitmodel']-data['Minutes'])
+    }
+)
+# print(databestfitmodel)
+
+
+ax1.plot(data['Units'],data['bestfitmodel'],c='r',label='bestfit model')
+
+
+
+ax1.legend()
+ax1.set_xlabel('UNITS')
+ax1.set_ylabel('MINUTES')
+ax1.set_title('Speculated Module')
+
+# SST=SSR=SSE
+#with using Linear Regression formulas
+SST=sum((data.Minutes-data.Minutes.mean())**2)
+SSE=sum(databestfitmodel.Error**2)
+SSR=SST-SSE
+print(SSR)
+Rsq=SSR/SST
+print(Rsq)
+
+
+
+#using Linear Regression
+data1=LinearRegression()
+data1.fit(data[["Units"]],data['Minutes'])
+print(data1.score(data[['Units']],y))
+# plt.show()
+
