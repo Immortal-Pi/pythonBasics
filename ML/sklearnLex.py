@@ -1,52 +1,45 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-data= pd.read_csv('computers.csv')
-x=data['Units']
-# print(x)
-y=data['Minutes']
+import numpy as np
 
-#Using Linear Regression formulas
+
+#using Linear Regression Formulas
+
+data=pd.read_csv('computers.csv')
+
+x=data.Units
+y=data.Minutes
 x_mean=x.mean()
 y_mean=y.mean()
-xiyi=x*y
 n=len(data)
-numerator=xiyi.sum()-n*x_mean*y_mean
-denominator=(x**2).sum() - n*(x_mean**2)
 
-# print(numerator/denominator)
-m=numerator/denominator
 #y=mx+c
-c=y_mean-(m*x_mean)
+numerator= (x*y).sum() -n*x_mean*y_mean
+denominator= (x**2).sum() - n*x_mean**2
+m=numerator/denominator
+c=y_mean-m*x_mean
+
 bestfitmodel=m*x+c
-print(bestfitmodel-y)
+# print(bestfitmodel-y)
 print(f"intercept: {c}, coefficient: {m}")
 
-# SST=SSR+SSE
+
+# SST=SSR-SSE
 SST=sum((y-y_mean)**2)
 SSE=sum((bestfitmodel-y)**2)
-
 SSR=SST-SSE
 print(SSR/SST)
 
 
-#using Linear Regression Library
+
+#using LinearRegression Library
+model=LinearRegression()
 x1=data[['Units']]
 y1=data['Minutes']
-model=LinearRegression()
 
-
-x1train,x1test,y1train,y1test=train_test_split(x1,y1,test_size=0.3)
-model.fit(x1train,y1train)
-print(model.coef_,model.intercept_)
-print(model.score(x1test,y1test))
-
-
-
-
-# model=LinearRegression()
-# model.fit(x,y)
-# print(model.intercept_,model.coef_)
-
-
-#lets includ
+x1_train,x1_test,y1_train,y1_test=train_test_split(x1,y1,test_size=0.3)
+model.fit(x1_train,y1_train)
+print(f'intercept: {model.intercept_}, coefficient:{model.coef_}')
+print(model.score(x1_test,y1_test))
