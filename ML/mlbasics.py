@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+import pandas as pd
+
 
 # time_studied=np.array([20,50,32,65,23,43,10,5,22,35,29,5,56]).reshape(-1,1)
 # scores=np.array([56,83,47,93,47,82,45,23,55,67,57,4,89]).reshape(-1,1)
@@ -41,15 +43,71 @@ from sklearn.model_selection import train_test_split
 # print(model1.score(studied_test,scores_test))
 # plt.show()
 
-time_studied=np.array([20,50,32,65,23,43,10,5,22,35,29,5,56])
-scores=np.array([56,83,47,93,47,82,45,23,55,67,57,4,89])
+# time_studied=np.array([20,50,32,65,23,43,10,5,22,35,29,5,56])
+# scores=np.array([56,83,47,93,47,82,45,23,55,67,57,4,89])
+#
+# model2=LinearRegression()
+# studied_train,studied_test,scores_train,scores_test=train_test_split(time_studied,scores,test_size=0.3)
+# model2.fit(studied_train,scores_train)
+#
+# plt.scatter(studied_train,scores_train)
+# plt.plot(np.linspace(0,70,100),model2.predict(np.linspace(0,70,100)),'r')
+# print(model2.score(studied_test,scores_test))
+# print(model2.predict(np.array([55])))
+# plt.show()
 
-model2=LinearRegression()
-studied_train,studied_test,scores_train,scores_test=train_test_split(time_studied,scores,test_size=0.3)
-model2.fit(studied_train,scores_train)
 
-plt.scatter(studied_train,scores_train)
-plt.plot(np.linspace(0,70,100),model2.predict(np.linspace(0,70,100)),'r')
-print(model2.score(studied_test,scores_test))
-print(model2.predict(np.array([55])))
-plt.show()
+data= pd.read_csv('computers.csv')
+
+model1=data['Minutes'].mean()
+model2=10+12*data['Units']
+model3=6+18*data['Units']
+
+# print(model1,model2,model3)
+
+fig,ax1=plt.subplots()
+ax1.scatter(x='Units',y='Minutes',data=data,label='actual repair time')
+
+ax1.plot(data['Units'],model2,c='r',label='model2')
+ax1.plot(data['Units'],model3,c='g',label='model3')
+
+ax1.legend()
+ax1.set_xlabel('UNITS')
+ax1.set_ylabel('MINUTES')
+ax1.set_title('Speculated Module')
+# plt.show()
+
+datamodule1=pd.DataFrame(
+    {
+        'Units':data['Units'],
+        'Actual_time':data['Minutes'],
+        'predicted_time':model1,
+        'Error':(model1-data['Minutes'])
+    }
+)
+print(sum(datamodule1['Error']**2))
+print(datamodule1)
+
+
+datamodule2=pd.DataFrame(
+    {
+        'Units':data['Units'],
+        'Actual_time':data['Minutes'],
+        'predicted_time':model2,
+        'Error':(model2-data['Minutes'])
+    }
+)
+print(sum(datamodule2['Error']**2))
+print(datamodule2)
+
+
+datamodule3=pd.DataFrame(
+    {
+        'Units':data['Units'],
+        'Actual_time':data['Minutes'],
+        'predicted_time':model3,
+        'Error':(model3-data['Minutes'])
+    }
+)
+print(sum(datamodule3['Error']**2))
+print(datamodule3)
