@@ -24,7 +24,7 @@ print(f'intercept: {model.intercept_} , coefficient:{model.coef_}')
 
 #calculate mean square error
 #c=y-mx
-y_prediction1=pd.DataFrame((model.coef_*xtest) + model.intercept_)
+# y_prediction1=pd.DataFrame(model.coef_[1]*)
 data['y_prediction1']=y_prediction1
 
 #prediction without using y=mx+C
