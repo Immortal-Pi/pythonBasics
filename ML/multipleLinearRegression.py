@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import seaborn as sns
 from statsmodels.stats.outliers_influence import variance_inflation_factor
-
+from sklearn.model_selection import train_test_split
 data=pd.read_csv('delivery.csv')
 # print(data)
 # print(data.info())
@@ -15,7 +15,7 @@ data=pd.read_csv('delivery.csv')
 
 x=data[['n.prod','distance']]
 y=data['delTime']
-
+xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=0.3)
 model=LinearRegression()
 model.fit(x,y)
 # print(f'intercept: {model.intercept_},coefficient: {model.coef_}')
@@ -50,7 +50,46 @@ print(f"correlation:\n{np.corrcoef(data['n.prod'],data['distance'])}")
 
 #variance inflation factor
 vif=pd.Series([variance_inflation_factor(x.values,idx) for idx in range(x.shape[1])],index=x.columns)
-
 print(f'\nvif:\n {vif}')
 
+# this explains that R^2(coeffecient of determination) value is in inflated when predictor values increase
+#model with single predictor - n.prod
 
+x1=data[['n.prod']]
+y1=data['delTime']
+model1=LinearRegression()
+x1train,x1test,y1train,y1test=train_test_split(x1,y1,test_size=0.2,random_state=2)
+model1.fit(x1,y1)
+print(model1.score(x1test,y1test))
+print(f'R^2 with 1 predictors:{model1.score(x1test,y1test)}')
+
+
+#model with multiple predictor - n.prod, distance
+x2=data[['n.prod','distance']]
+y2=data['delTime']
+x2train,x2test,y2train,y2test=train_test_split(x2,y2,test_size=0.2,random_state=5)
+model2=LinearRegression()
+model2.fit(x2train,y2train)
+print(f'R^2 with 2 predictors:{model2.score(x2test,y2test)}')
+
+
+#model with adjusted R for multiple predictor -n.prod, distance
+adjusted_rscore_model2= 1-(1-model2.score(x2,y2))*(len(y2)-1)/(len(y2)-x2.shape[1]-1)
+adjusted_rscore_model1= 1-(1-model1.score(x1,y1))*(len(y1)-1)/(len(y1)-x1.shape[1]-1)
+
+print(f'adjusted R^2 model1: {adjusted_rscore_model1}\nadjusted R^2 model2: {adjusted_rscore_model2}')
+
+
+
+#catogorical variables
+#if the column variables are qualitative values and like a label :- catogorical variables
+
+view= pd.DataFrame(
+    {
+        'apartmentName':['galleria','RMZ','shoba','123'],
+        'view':[1,2,3,4],
+        'location':['bangalore','chennai','hebbal','yelanka']
+    }
+)
+view_index=pd.get_dummies(view['view'])
+print(view_index)
