@@ -49,6 +49,9 @@ ax.scatter(xs=data['n.prod'],ys=data['distance'],zs=predicted_model,alpha=1,c='r
 print(f"correlation:\n{np.corrcoef(data['n.prod'],data['distance'])}")
 
 #variance inflation factor
+for a in range(x.shape[1]):
+    print(x.values,a)
+
 vif=pd.Series([variance_inflation_factor(x.values,idx) for idx in range(x.shape[1])],index=x.columns)
 print(f'\nvif:\n {vif}')
 
