@@ -1,1 +1,1 @@
-![img_2.png](../matplotlib/img_2.png)
+![img_1.png](img_1.png)
