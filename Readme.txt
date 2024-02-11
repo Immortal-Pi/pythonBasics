@@ -15,7 +15,7 @@
 	• matplotlib
 	• pandas
 
-  ML concepts
+  ML concepts sklearn
     • linear regression
     • logistic regression
     • Decision trees
