@@ -15,7 +15,7 @@ data['norm_income']=scalar_values[:,1]
 
 x=data[['norm_balance','norm_income']]
 y=data['default']
-
+print(x)
 xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=0.2,random_state=100)
 model=KNeighborsClassifier()
 

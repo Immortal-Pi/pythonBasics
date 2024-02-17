@@ -52,7 +52,7 @@ from sklearn.neighbors import KNeighborsClassifier
 #take 2 building a K nearest neighbor using sklearn
 
 #1: loading data
-data=pd.read_csv('defaulter.csv')
+data=pd.read_csv('datasets/defaulter.csv')
 
 #2: feature engineering - normalization
 scalar=MinMaxScaler()
