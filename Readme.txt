@@ -10,10 +10,8 @@
 	• Unit tests
 	• File I/O
 	• Regular expressions (validate data, extract data)
-	• Object oriented programming s
-	• numpy
-	• matplotlib
-	• pandas
+	• Object oriented programming
+
 
   ML concepts sklearn
     • linear regression
@@ -21,6 +19,11 @@
     • Decision trees
     • K-nearest neighbor
     • support vector machine
+
+  Data science concepts
+    • numpy
+	• matplotlib
+	• pandas
 
 
 link to the course 
