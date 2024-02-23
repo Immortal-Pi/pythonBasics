@@ -1,5 +1,6 @@
 import json
 
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -77,7 +78,34 @@ marks_df = pd.DataFrame(marks, index = ['Subodh', 'Ram', 'Abdul', 'John'])
 
 
 #sorting by values
-marks_df.sort_values(by='English',inplace=True)
-print(marks_df)
-marks_df.sort_values(by=['Chemistry','English'],inplace=True,ascending=(0,1))
-print(marks_df)
+# marks_df.sort_values(by='English',inplace=True)
+# print(marks_df)
+# marks_df.sort_values(by=['Chemistry','English'],inplace=True,ascending=(0,1))
+# print(marks_df)
+
+
+# #encryption of dataframe object
+# encrypt_data=np.sin(marks_df)
+# print(encrypt_data)
+#
+# #resetting index
+# index_reset=marks_df.reset_index()
+# print(index_reset)
+
+
+#broadcasting
+# print(da)
+# print(marks_df['Chemistry']+5)
+
+#apply
+# print(marks_df)
+# print(marks_df.apply(np.sum,axis=1))
+# print(marks_df.apply(np.sum,axis=0))
+
+
+
+#Aggregation function
+list1 = [col for col in marks_df.columns if marks_df[col].dtype in ['float', 'int64']]
+#the above function is getting all the column names i.e. int and float because to use min and max i.e. mathematical function
+print(list1)
+print(marks_df.agg(['min','max']))

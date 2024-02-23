@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 #read from a csv file
-df=pd.read_csv('data2.csv',delimiter=',')
+df=pd.read_csv('datasets/data2.csv', delimiter=',')
 df.set_index('name',inplace=True)
 print(df)
 # df.to_csv('data2.csv',index=True)
